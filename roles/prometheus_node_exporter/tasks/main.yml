@@ -1,3 +1,8 @@
+- name: Allow access to port 9100
+  community.general.ufw:
+    rule: allow
+    port: '9100'
+
 - name: Creating node_exporter user group
   group: name="{{groupId}}"
   become: true
